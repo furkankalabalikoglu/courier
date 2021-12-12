@@ -1,0 +1,28 @@
+1) For getting total travelled of an courier, please execute the script which provided below or create request by following Section 2.
+
+INSERT INTO MOVEMENTLOGS VALUES (1,'2021-12-13 01:01:01',40.0066851,29.6552262,0,NULL)
+INSERT INTO MOVEMENTLOGS VALUES (1,'2021-12-13 01:02:01',41.0066851,29.6552262,0,NULL)
+
+Then create a request for: GET /api/movement/1
+
+----------------------------------------------------------------------------------------------------------
+
+2) For inserting a movement log, you can use JSON which provided below:
+
+{
+    "courier_id":1,
+    "location":{
+        "latitude":40.9923309,
+        "longitude":23.1244229
+    },
+    "log_date":"2021-12-12 01:03:01"
+}
+
+Then create a request for: POST /api/movement
+
+----------------------------------------------------------------------------------------------------------
+
+3) For testing entrance to a store area, you can use JSON which provided on Section 2 and change its latitude and longitude
+value with stores location information or nearly values.
+
+4) For testing reentry case, please use JSON structure on Section 2 again. Please change log_date value for your purpose.
